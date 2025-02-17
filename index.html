@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anant Yog</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Optional: Make the map responsive */
+    .map-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+      #nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    background: transparent;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: black;
+        padding: 10px;
+        width: 150px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <h1>ANANT YOG</h1>
+      <ul id="nav-links">
+        <li style="background-color: transparent"><a href="#home">Home</a></li>
+        <li style="background-color: transparent"><a href="#services">Services</a></li>
+        <li style="background-color: transparent"><a href="#testimonials">Testimonials</a></li>
+        <li style="background-color: transparent"><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <script>  /*toggle menu function...*/
+
+    function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("active");
+    }
+  </script>
+
+   <!-- Hero Section with Image Slideshow -->
+  <div id="home" class="w3-content w3-section w3-block" style="max-width:100%">
+    <img class="mySlides" src="img6.jpg" style="width:100%">
+    <img class="mySlides" src="img7.jpg" style="width:100%">
+    <img class="mySlides" src="img8.jpg" style="width:100%">
+  </div>
+
+
+    <script>       /*...slideshow Javascipt...*/
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 7000); // Change image every 7 seconds
+      }
+    </script>
+
+  <!-- Services Section -->
+<section id="services" class="w3-container w3-padding-32">
+
+  <!-- Services Section bar -->
+  <div class="w3-container w3-black w3-center w3-allerta">
+    <p class="w3-xlarge">SERVICES</p>
+  </div>
+
+  <!-- Services Section bar yoga Card -->
+    <div class="w3-row-padding">
+      
+        <div class="w3-third">
+          <div class="w3-card w3-padding w3-center">
+            <img src="img4.jpg" alt="Hatha Yoga" style="width:100%">
+            <h3>Hatha Yoga : A Gentle Path to Wellness </h3>
+            <p>Hatha Yoga is a traditional form of yoga that focuses on balancing the mind and body through physical postures (asanas), breathing exercises (pranayama), and meditation. It is a gentle and slow-paced practice, making it ideal for beginners and those seeking relaxation.</p>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="w3-card w3-padding w3-center">
+            <img src="image2.jpg" alt="Vinyasa Yoga" style="width:100%">
+            <h3>Vinyasa Yoga : Breath & Movement</h3>
+            <p>Vinyasa Yoga is a dynamic and energetic style of yoga where poses flow smoothly from one to another, synchronized with breath. It is often called "flow yoga" because of its continuous movement, making it an excellent practice for building strength, flexibility, and mindfulness.Boosts Cardiovascular Health.</p>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="w3-card w3-padding w3-center">
+            <img src="img5.jpg" alt="Meditation" style="width:100%">
+            <h3>Meditation : Inner Peace & Clarity</h3>
+            <p>Meditation is a practice that trains the mind to focus and redirect thoughts, leading to calmness, awareness, and emotional balance. It has been practiced for thousands of years in various spiritual traditions and is now widely recognized for its mental and physical health benefits.</p>
+          </div>
+        </div>
+
+    </div>
+
+ <!-- Benefits section -->
+  <div class="w3-container w3-black w3-center w3-allerta">
+
+        <p class="w3-xlarge">BENEFITS</p>
+        <p>✅ Reduces Stress & Anxiety – Lowers cortisol levels, promoting relaxation.</p>
+        <p>
+      ✅ Enhances Focus & Concentration – Improves attention span and mental clarity.</p>
+      <p>
+      ✅ Promotes Emotional Well-Being – Helps manage emotions and cultivates a positive mindset.</p>
+      <p>
+      ✅ Improves Sleep Quality – Calms the nervous system, aiding deep sleep.</p>
+      <p>
+      ✅ Boosts Self-Awareness – Encourages introspection and mindfulness.
+      </p>
+      <p>
+      ✅ Lowers Blood Pressure – Supports cardiovascular health by reducing stress-related tension.</p>
+          
+  </div>
+
+  <!-- Pricing Section -->
+    <div class="w3-row-padding">
+
+        <!-- Pricing Section cards-->
+        <div class="w3-third">
+          <div style="border:10px solid white" class="w3-card w3-padding w3-center w3-panel w3-hover-border-orange">
+            <h3>Two Days Session</h3>
+            <p class="price" style="background-color:black;color:floralwhite;">RS 99/- <span>ONLY</span></p>
+            <ul class="w3-ul">
+              <li style="background-color:lightgreen;color:black">SAT AND SUN</li>
+              <li>0800 - 0900 AM</li>
+              <li>Trial session</li>
+            </ul>
+            <button class="w3-button w3-orange"><a href="https://rzp.io/rzp/Biq4QrIB" style="font-size: 15px;"><strong>PAY NOW</strong></a></button>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div style="border:10px solid white" class="w3-card w3-padding w3-center w3-panel w3-hover-border-orange">
+            <h3>01 Month Session </h3>
+            <p class="price" style="background-color:black;color:floralwhite;">RS 1999/- <span>ONLY</span></p>
+            <ul class="w3-ul">
+              <li style="background-color:lightgreen;color:black">5 DAYS A WEEK</li>
+              <li>0800 - 0900 AM </li>
+              <li>Workshops</li>
+            </ul>
+            <button class="w3-button w3-orange"><a href="https://rzp.io/rzp/4ajRWjtE" style="font-size: 15px;"><strong>PAY NOW</strong></a></button>
+          </div>
+        </div>
+
+        <div class="w3-third" >
+          <div style="border:10px solid white" class="w3-card w3-padding w3-center w3-panel w3-hover-border-orange">
+            <h3>03 Months Session</h3>
+            <p class="price" style="background-color:black;color:floralwhite;">RS 4999/- <span>ONLY</span></p>
+            <ul class="w3-ul">
+              <li style="background-color:lightgreen;color:black">5 DAYS A WEEK</li>
+              <li>0800 - 0900 AM </li>
+              <li>Diet Plans</li>
+            </ul>
+            <button class="w3-button w3-orange"><a href="https://rzp.io/rzp/9Q07iG2Y" style="font-size: 15px;"><strong>PAY NOW</strong></a></button>
+          </div>
+        </div>
+
+    </div><!-- End of Pricing Plans -->
+
+  </section><!-- End of services section -->
+
+
+<!-- start of testimonials section -->
+<section id="testimonials" class="w3-container w3-padding-32 w3-light-grey">
+
+  <!--testimonials bar -->
+  <div class="w3-container w3-black w3-center w3-allerta">
+    <p class="w3-xlarge">TESTIMONIALS</p>
+  </div>
+
+  <!-- Testimonials Section -->
+    <h1 class="w3-center">"What Our Clients Say"</h1>
+    <div class="w3-row-padding">
+
+      <div class="w3-half">
+        <div class="w3-card w3-padding">
+          <img src="img10.png" alt="Hatha Yoga" style="width:39%">
+          <p>"Anant yog has changed my life! The instructors are amazing."</p>
+          <h4>- Sudha Shankar</h4>
+        </div>
+      </div>
+
+      <div class="w3-half">
+        <div class="w3-card w3-padding">
+          <img src="img11.png" alt="Hatha Yoga" style="width:40%">
+          <p>"Every session leaves me feeling refreshed and centered.</p>
+          <h4>- Amina</h4>
+        </div>
+      </div>
+
+      <div class="w3-half">
+        <div class="w3-card w3-padding">
+          <p>"I've noticed significant improvements in my flexibility and well-being"</p>
+          <h4>- Mamta</h4>
+        </div>
+      </div>
+
+      <div class="w3-half">
+        <div class="w3-card w3-padding w3-center">
+          <p>"The peaceful environment of Anant yog sessions truly helps me unwind."</p>
+          <h4>- Bassapa K</h4>
+      </div>
+    </div>
+  </div>
+
+    <!-- start of team section -->
+    <div class="w3-container w3-black w3-center w3-allerta">
+    <p class="w3-xlarge">OUR TEAM</p>
+    </div>
+
+    <div class="w3-row-padding">
+
+      <div class="w3-third">
+        <div class="w3-card w3-padding w3-center">
+          <img class="w3-circle" src="photo1.jpeg" alt="Hatha Yoga" style="width:70%">
+          <h3>ROHIT KUMAR</h3>
+          <p>Managing Director</p>
+        </div>
+      </div>
+
+      <div class="w3-third" >
+        <div class="w3-card w3-padding w3-center">
+          <img class="w3-circle" src="photo2.jpg" alt="Vinyasa Yoga" style="width:70%">
+          <h3>RAHUL KUMAR</h3>
+          <p>Chief financial officer</p>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card w3-padding w3-center">
+          <img class="w3-circle" src="photo3.jpg" alt="Meditation" style="width:80%">
+          <h3>ISHANI</h3>
+          <p>Lead Instructor and Trainer</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- End of testimonials section -->
+
+<!-- start of contact section -->
+<section id="contact" class="w3-container w3-padding-32 w3-light-grey">
+  <div class="w3-container w3-black w3-center w3-allerta">
+  <p class="w3-xlarge">CONTACT US</p>
+  </div>
+
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfov_HJdPsNpCbpNStTBJMVI8jOSkmjWKVToHUQvMpOZLCEsw/viewform?embedded=true" width="640" height="1589" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+</section>
+<!-- End of contact section -->
+
+
+<!-- start of Map section -->
+  <div class="w3-container w3-black w3-center w3-allerta">
+  <p class="w3-xlarge">LOCATE US</p>
+  </div>
+
+  <div class="map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.5286690282046!2d77.99858897527075!3d29.906678825085468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39094bea39844175%3A0xe0510e46d190f879!2sPatanjali%20Yogpeeth!5e0!3m2!1sen!2sin!4v1739729399587!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    
+  </iframe>
+</div>
+
+<!-- End of map section -->
+
+
+  <!-- Footer -->
+  <footer class="w3-black w3-padding-5">
+    
+      <img class="w3-circle" style="background-color: floralwhite;"src="logo1.png" width="15%">
+      <p>Contact Us : 9113375643</p>
+      <p>Email : rohitkumarjha15006@gmail.com</p>
+      <p>©Anant Yog | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
