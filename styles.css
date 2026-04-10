@@ -1,0 +1,301 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  scroll-behavior: smooth;
+  background: #fafafa;
+}
+
+h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s, transform 1s;
+}
+
+/* Navigation Bar */
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Hero Section & Slideshow */
+.hero {
+  position: relative;
+  padding-top: 70px; /* Account for fixed nav */
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.dot-container {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  display: inline-block;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Button Styling */
+button {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: #e68900;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 20px;
+  margin-top: 20px;
+}
+
+/* Services & Testimonials Wrapper */
+.services-wrapper,
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service, .testimonial {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.service:hover, .testimonial:hover {
+  transform: scale(1.05);
+}
+
+/* Pricing Cards */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pricing-card {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.pricing-card h3 {
+  margin-top: 0;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.pricing-card .price span {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  margin: 10px 0;
+}
+
+/* Contact Form */
+#contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+#contact form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    width: 100%;
+    display: none;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Slideshow caption width */
+  .slide-caption {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  /* Services & Testimonials stacking */
+  .services-wrapper,
+  .testimonials-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Pricing Cards stacking */
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-caption h2 {
+    font-size: 1.2rem;
+  }
+  .slide-caption p {
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  #contact form input,
+  #contact form textarea {
+    font-size: 0.9rem;
+  }
+}
