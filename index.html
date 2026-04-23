@@ -3,7 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anant Yog</title>
+  <title>Anant Yog – Find Your Inner Peace | Yoga & Meditation Classes</title>
+
+  <!-- ===== SEO META TAGS ===== -->
+  <meta name="description" content="Anant Yog – Transform your mind, body & soul with Hatha Yoga, Vinyasa Yoga & Meditation. 500+ students trained. Join a free trial class today for just ₹99.">
+  <meta name="keywords" content="yoga studio, hatha yoga, vinyasa yoga, meditation, yoga classes, anant yog, wellness, yoga india, yoga near me, online yoga">
+  <meta name="author" content="Anant Yog">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (WhatsApp / Facebook previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anant Yog – Find Your Inner Peace">
+  <meta property="og:description" content="Transform your mind, body & soul with Hatha Yoga, Vinyasa & Meditation. Book your ₹99 trial class today.">
+  <meta property="og:image" content="YOGA_2025/Anant-yog-poster.png">
+  <meta property="og:site_name" content="Anant Yog">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anant Yog – Find Your Inner Peace">
+  <meta name="twitter:description" content="Transform your mind, body & soul with Hatha Yoga, Vinyasa & Meditation.">
+  <meta name="twitter:image" content="YOGA_2025/Anant-yog-poster.png">
+
+  <!-- ===== GOOGLE ANALYTICS (GA4) ===== -->
+  <!-- IMPORTANT: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID         -->
+  <!-- Get your ID at: https://analytics.google.com → Admin → Create Property       -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN6VTB4MN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DFN6VTB4MN');
+  </script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -1027,6 +1057,147 @@
       .section-banner h2 { font-size: 1.35rem; }
       .flip-card { height: 285px; }
     }
+
+    /* ===== CLASS SCHEDULE ===== */
+    #schedule { padding: 0 1.5rem 3.5rem; background: var(--bg); }
+    .schedule-inner { max-width: 1100px; margin: 0 auto; }
+    .schedule-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    table.sched-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--white); font-size: 0.88rem;
+      min-width: 560px;
+    }
+    .sched-table th {
+      background: var(--primary-dark); color: white;
+      padding: 1rem 0.9rem; text-align: center;
+      font-family: 'Lato', sans-serif; font-size: 0.75rem;
+      letter-spacing: 2px; text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .sched-table th:first-child { width: 120px; text-align: left; padding-left: 1.1rem; }
+    .sched-table td {
+      padding: 0.85rem 0.75rem; text-align: center;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      vertical-align: middle;
+    }
+    .sched-table tr:last-child td { border-bottom: none; }
+    .sched-table tr:hover td { background: rgba(61,107,79,0.03); }
+    .sched-table .time-col {
+      font-weight: 700; color: var(--primary);
+      font-size: 0.79rem; white-space: nowrap;
+      background: rgba(61,107,79,0.05);
+      text-align: left; padding-left: 1.1rem;
+    }
+    .class-pill {
+      display: inline-block; padding: 0.3rem 0.8rem;
+      border-radius: 50px; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.4px; white-space: nowrap;
+    }
+    .pill-hatha    { background: #E8F5E9; color: #2E7D32; }
+    .pill-vinyasa  { background: #E3F2FD; color: #1565C0; }
+    .pill-meditate { background: #F3E5F5; color: #6A1B9A; }
+    .pill-trial    { background: #FFF8E1; color: #E65100; font-weight: 700; }
+    .pill-rest     { color: #BBBBBB; font-style: italic; font-size: 0.72rem; }
+    .sched-legend {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      justify-content: center; margin-top: 1.6rem;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.82rem; color: var(--text-muted);
+    }
+    .legend-dot {
+      width: 11px; height: 11px;
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .sched-note {
+      text-align: center; margin-top: 1.6rem;
+      font-size: 0.9rem; color: var(--text-muted);
+      line-height: 1.72;
+    }
+    .sched-note strong { color: var(--accent); font-style: normal; }
+
+    /* ===== FAQ ACCORDION ===== */
+    #faq { padding: 0 1.5rem 3.5rem; background: var(--bg-alt); }
+    .faq-inner { max-width: 800px; margin: 0 auto; }
+    .faq-item {
+      border-radius: var(--radius); background: var(--white);
+      box-shadow: var(--shadow); margin-bottom: 12px;
+      overflow: hidden; transition: box-shadow 0.3s ease;
+    }
+    .faq-item:hover { box-shadow: var(--shadow-deep); }
+    .faq-q {
+      width: 100%; padding: 1.18rem 1.4rem;
+      display: flex; justify-content: space-between; align-items: center;
+      background: none; border: none; cursor: pointer;
+      text-align: left; font-family: 'Lato', sans-serif;
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--text); transition: color 0.25s ease;
+      border-radius: var(--radius);
+      line-height: 1.4;
+    }
+    .faq-q:hover { color: var(--primary); }
+    .faq-item.open .faq-q { color: var(--primary); }
+    .faq-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(61,107,79,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; font-weight: 300; line-height: 1;
+      flex-shrink: 0; margin-left: 1rem;
+      color: var(--accent);
+      transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.42s ease, padding 0.3s ease;
+      padding: 0 1.4rem;
+    }
+    .faq-item.open .faq-a { max-height: 320px; padding: 0 1.4rem 1.35rem; }
+    .faq-a p {
+      margin: 0; font-size: 0.96rem;
+      color: var(--text-muted); line-height: 1.8;
+    }
+    .faq-a a { color: var(--accent); }
+
+    /* ===== DARK MODE — NEW SECTIONS ===== */
+    body.dark #schedule            { background: var(--bg) !important; }
+    body.dark #faq                 { background: var(--bg-alt) !important; }
+    body.dark .faq-item            { background: var(--white) !important; }
+    body.dark .faq-q               { color: var(--text); }
+    body.dark .faq-icon            { background: rgba(255,255,255,0.08); }
+    body.dark .faq-a p             { color: var(--text-muted); }
+    body.dark .sched-table         { background: #1B2920 !important; }
+    body.dark .sched-table td      { border-bottom-color: rgba(255,255,255,0.05); }
+    body.dark .sched-table tr:hover td { background: rgba(255,255,255,0.03); }
+    body.dark .sched-table .time-col   { background: rgba(61,107,79,0.18); color: var(--accent-light); }
+    body.dark .sched-note          { color: var(--text-muted); }
+    body.dark .legend-item         { color: var(--text-muted); }
+
+    /* ===== RESPONSIVE — NEW SECTIONS ===== */
+    @media (max-width: 768px) {
+      #schedule { padding: 0 0.75rem 2.5rem; }
+      #faq      { padding: 0 0.75rem 2.5rem; }
+      .sched-legend { gap: 12px; }
+      .legend-item  { font-size: 0.77rem; }
+      .sched-note   { font-size: 0.84rem; }
+    }
+    @media (max-width: 480px) {
+      #schedule { padding: 0 0.5rem 2rem; }
+      #faq      { padding: 0 0.5rem 2rem; }
+      .sched-table { font-size: 0.78rem; }
+      .class-pill  { padding: 0.22rem 0.55rem; font-size: 0.68rem; }
+      .sched-table th { font-size: 0.67rem; letter-spacing: 1px; padding: 0.75rem 0.5rem; }
+      .sched-table td { padding: 0.7rem 0.4rem; }
+      .sched-table .time-col { font-size: 0.71rem; padding-left: 0.6rem; }
+      .faq-q    { font-size: 0.9rem; padding: 1rem 1.1rem; }
+      .faq-a p  { font-size: 0.88rem; }
+      .faq-icon { width: 24px; height: 24px; font-size: 1.2rem; margin-left: 0.6rem; }
+    }
   </style>
 </head>
 <body>
@@ -1047,7 +1218,9 @@
       <ul id="nav-links">
         <li style="background-color:transparent"><a href="#home">Home</a></li>
         <li style="background-color:transparent"><a href="#services">Services</a></li>
+        <li style="background-color:transparent"><a href="#schedule">Schedule</a></li>
         <li style="background-color:transparent"><a href="#testimonials">Testimonials</a></li>
+        <li style="background-color:transparent"><a href="#faq">FAQ</a></li>
         <li style="background-color:transparent"><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -1130,19 +1303,19 @@
   <div class="stats-bar reveal">
     <div class="stats-inner">
       <div class="stat-item">
-        <span class="stat-number">500+</span>
+        <span class="stat-number" data-target="500" data-suffix="+">500+</span>
         <span class="stat-label">Students Trained</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">5+</span>
+        <span class="stat-number" data-target="5" data-suffix="+">5+</span>
         <span class="stat-label">Years of Excellence</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">3</span>
+        <span class="stat-number" data-target="3" data-suffix="">3</span>
         <span class="stat-label">Wellness Programs</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">100%</span>
+        <span class="stat-number" data-target="100" data-suffix="%">100%</span>
         <span class="stat-label">Satisfaction</span>
       </div>
     </div>
@@ -1312,6 +1485,87 @@
 
   </section>
 
+  <!-- Schedule Header -->
+  <div class="section-banner alt reveal">
+    <span class="eyebrow">Weekly Timetable</span>
+    <h2>CLASS SCHEDULE</h2>
+    <div class="ornament">
+      <span class="ln"></span><span class="gem"></span><span class="ln r"></span>
+    </div>
+  </div>
+
+  <!-- Schedule Section -->
+  <section id="schedule">
+    <div class="schedule-inner reveal">
+      <div class="schedule-table-wrap">
+        <table class="sched-table">
+          <thead>
+            <tr>
+              <th>Batch / Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-col">🌅 6:00 – 7:00 AM</td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-trial">Trial ₹99</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">☀️ 7:00 – 8:00 AM</td>
+              <td><span class="class-pill pill-meditate">Meditation</span></td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-meditate">Meditation</span></td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-trial">Trial ₹99</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">🌆 6:00 – 7:00 PM</td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-meditate">Meditation</span></td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-meditate">Meditation</span></td>
+              <td><span class="class-pill pill-rest">—</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">🌙 7:00 – 8:00 PM</td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-meditate">Meditation</span></td>
+              <td><span class="class-pill pill-vinyasa">Vinyasa</span></td>
+              <td><span class="class-pill pill-hatha">Hatha</span></td>
+              <td><span class="class-pill pill-rest">—</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sched-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Hatha Yoga</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>Vinyasa Yoga</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#6A1B9A"></div>Meditation</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#E65100"></div>Trial Session</div>
+      </div>
+
+      <p class="sched-note">
+        📅 <strong>Saturday & Sunday:</strong> Trial sessions available at just ₹99 (fee refunded on enrolment) &nbsp;·&nbsp;
+        <strong>Flexible hours</strong> available for monthly &amp; quarterly members &nbsp;·&nbsp;
+        <a href="#contact" style="color:var(--accent);font-weight:700;">Contact us</a> to book your slot
+      </p>
+    </div>
+  </section>
+
   <!-- Testimonials Header -->
   <div class="section-banner reveal">
     <span class="eyebrow">Client Stories</span>
@@ -1455,6 +1709,92 @@
     </div>
   </section>
 
+  <!-- FAQ Header -->
+  <div class="section-banner reveal">
+    <span class="eyebrow">Got Questions?</span>
+    <h2>FAQ</h2>
+    <div class="ornament">
+      <span class="ln"></span><span class="gem"></span><span class="ln r"></span>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="faq-inner">
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          What should I bring to my first class?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Just bring yourself, comfortable stretchable clothing, and a water bottle. We provide yoga mats, blocks, and straps at the studio. If you prefer your own mat, you're very welcome to bring one.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          Are the classes suitable for complete beginners?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely! We welcome students of all levels. Our Hatha Yoga classes are especially beginner-friendly, and our instructors always offer modifications so every student can practice safely and comfortably at their own pace.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          How do I book a trial class?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>You can book a Saturday or Sunday trial session for just ₹99 using our online payment link in the Pricing section above. The ₹99 fee is fully refunded when you enrol in any regular session. You can also <a href="#contact">contact us</a> via the form or WhatsApp to confirm your slot.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          What is your cancellation or rescheduling policy?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>We understand that schedules can change. Please inform us at least 24 hours in advance to reschedule a session. Monthly and quarterly members enjoy flexible scheduling — just coordinate with your instructor to find a convenient alternate slot.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          Do you offer online yoga sessions?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes! We offer live online sessions via video call for students who cannot attend in person. <a href="#contact">Contact us</a> through the form or WhatsApp to get details on our online batch timings and pricing.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          What is included in the 3-month plan?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>The 3-month plan includes 5 days of yoga per week with flexible hours, personalised diet plans, access to monthly wellness workshops, and priority support from our instructors. It's the best value plan for anyone committed to their transformation journey.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          Is there a diet or nutrition plan included?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Diet plans are included in our 3-Month Session package. Our instructors provide personalised guidance based on your health goals, combining yoga practice with mindful nutrition for holistic wellness.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Contact Header -->
   <div class="section-banner reveal">
     <span class="eyebrow">Get In Touch</span>
@@ -1509,16 +1849,16 @@
     <a href="https://wa.me/919113375643" target="_blank" rel="noopener" class="fab fab-whatsapp" title="Chat on WhatsApp">💬</a>
   </div>
 
-  <!-- Scroll Reveal + Loader JS -->
+  <!-- Scroll Reveal + Loader + Stats Counter + FAQ JS -->
   <script>
-    // Page loader
+    // ── Page loader ──
     window.addEventListener('load', function () {
       setTimeout(function () {
         document.getElementById('page-loader').classList.add('hidden');
       }, 1300);
     });
 
-    // Scroll reveal via IntersectionObserver
+    // ── Scroll reveal via IntersectionObserver ──
     var revealEls = document.querySelectorAll('.reveal');
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -1529,6 +1869,51 @@
       });
     }, { threshold: 0.1 });
     revealEls.forEach(function (el) { observer.observe(el); });
+
+    // ── Stats Counter Animation ──
+    function animateCounter(el) {
+      var target   = parseInt(el.getAttribute('data-target'), 10);
+      var suffix   = el.getAttribute('data-suffix') || '';
+      var duration = 1800; // ms
+      var startTime = null;
+
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        el.textContent = Math.round(easeOutCubic(progress) * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    document.querySelectorAll('.stat-number[data-target]').forEach(function (el) {
+      counterObserver.observe(el);
+    });
+
+    // ── FAQ Accordion ──
+    document.querySelectorAll('.faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item   = this.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        // Close all open items
+        document.querySelectorAll('.faq-item.open').forEach(function (el) {
+          el.classList.remove('open');
+        });
+        // Open clicked item (unless it was already open)
+        if (!isOpen) item.classList.add('open');
+      });
+    });
   </script>
 
 </body>
